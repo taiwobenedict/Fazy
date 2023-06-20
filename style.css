@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Titan+One&display=swap");
+
+/* Variable */
+:root {
+  --bg-color: linear-gradient(176.4deg, #f3d16d 1.5%, #f5c644 122.41%);
+  --brown-bg: #c37004;
+  --light: #ffffff;
+}
+
+/* Utility */
+.flex {
+  display: flex;
+}
+
+.blur-bg {
+  background: rgba(195, 112, 4, 0.32);
+  backdrop-filter: blur(6px);
+}
+
+.title {
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  margin: 24px auto;
+}
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--light);
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Hero section */
+#hero-section {
+  height: 100vh;
+  position: relative;
+  background: url("images/BG.png") center center/cover no-repeat;
+  background-position-y: top;
+}
+
+.hero-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.main-nav {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.link-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--brown-bg);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.logo-bg {
+  width: 50px;
+  height: 50px;
+  background-color: var(--brown-bg);
+  border-radius: 50%;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-icon {
+  /* font-size: 16px !important; */
+  color: var(--light);
+  margin: 0 10px;
+}
+
+.nav-links {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(195, 112, 4, 0.52);
+  backdrop-filter: blur(5px);
+}
+
+.nav-links a {
+  display: block;
+}
+
+.toggler {
+  margin-left: 3rem;
+}
+
+/* cta */
+.cta-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-buttons {
+  transform: translateY(50px);
+}
+
+.cta-btn {
+  font-family: "Titan One", cursive;
+  color: var(--light);
+  font-weight: 400;
+  font-size: 16.1px;
+  line-height: 11px;
+  margin: 0 1rem;
+  background-color: var(--brown-bg);
+  padding: 10px 28.2353px;
+
+  border-radius: 22.2353px;
+  box-shadow: 0px 4px 5px rgba(205, 205, 205, 0.7);
+}
+
+.cactus-sm {
+  width: 26px;
+  position: absolute;
+  bottom: -20px;
+  left: 72px;
+}
+
+/* Features */
+#features {
+  padding-bottom: 45px;
+}
+
+.feature {
+  font-family: "Montserrat", sans-serif;
+  max-width: 260px;
+  height: 65px;
+  margin: 0 auto 14.7px auto;
+  border-radius: 19.6226px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14.717px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon {
+  margin-right: 0.8rem;
+  line-height: 1.8 !important;
+  font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+  padding: 31px 0px 32.9px 0px;
+  position: relative;
+  margin-bottom: 52px;
+}
+.about-image {
+  width: 224px;
+  margin: 0 auto;
+  background-color: var(--brown-bg);
+  border-radius: 16px;
+}
+
+.about-text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  max-width: 338px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.whitepaper {
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 11.7059px;
+  line-height: 15px;
+  text-align: center;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.whitepaper a {
+  color: var(--light);
+  background-color: var(--brown-bg);
+  padding: 5px 20px;
+  border-radius: 30.7279px;
+}
+
+.rock {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 244px;
+}
+
+/* How to buy  */
+#how-to-buy {
+  position: relative;
+}
+
+#how-to-buy .title {
+  padding-bottom: 1rem;
+}
+
+.card {
+  padding: 48px 16px 16px;
+  gap: 2.41px;
+  max-width: 398px;
+  background: rgba(195, 112, 4, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  margin: 35.13px auto;
+  position: relative;
+}
+
+.card-image-container,
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.card-image-container {
+  border: solid 4.83px rgba(255, 255, 255, 0.22);
+  margin: 0 auto;
+  width: 64.13px;
+  height: 64.13px;
+  position: absolute;
+  top: -30;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card-image {
+  width: 55.48px;
+  height: 55.48px;
+  background-color: var(--brown-bg);
+  border: solid 4.82px rgba(255, 255, 255, 0.52);
+}
+
+.card-image img {
+  width: 32px;
+  height: 32px;
+}
+
+.card-title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.card-text {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 0.5rem;
+}
+
+.hill {
+  position: absolute;
+  left: 0;
+  bottom: -35;
+  width: 270px;
+  z-index: -1;
+}
+
+/* Tokenomics http://localhost/5500 */
+#tokenomics {
+  padding-top: 100px;
+  position: relative;
+}
+
+.token-container {
+  max-width: 398px;
+  background: var(--brown-bg);
+  backdrop-filter: blur(1.80909px);
+  border-radius: 16px;
+  padding: 17.4879px 16px;
+  margin: 0 auto;
+}
+
+.token-container .title {
+  margin: initial;
+  text-align: start;
+}
+
+.token-image {
+  position: absolute;
+  width: 120px;
+  border-radius: 16px;
+  top: -75;
+  right: 20;
+  background: rgba(195, 112, 4, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+/* Charts */
+#charts {
+  margin-bottom: 3rem;
+}
+
+.chart {
+  width: 183.9px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 1.8rem;
+}
+
+/* Roadmap */
+#roadmap {
+  position: relative;
+}
+
+.phases {
+  max-width: 398px;
+  margin: 0 auto;
+}
+
+.phase {
+  padding: 0px 0px 0px 40px;
+  border-left: solid 7px var(--brown-bg);
+  position: relative;
+}
+
+.phase::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: var(--brown-bg);
+  border-radius: 5.5px;
+  position: absolute;
+  top: 0;
+  left: -15;
+}
+
+.phase:last-child {
+  border-left-color: transparent;
+}
+
+.phase .card-title {
+  margin-bottom: 20px;
+}
+
+.cactus-lg {
+  position: absolute;
+  width: 50px;
+  bottom: 160;
+  right: 100;
+}
+
+/* Swiper */
+.swiper {
+  max-width: 398px;
+  margin: 74.1px auto 50px auto;
+  height: 112px;
+}
+
+.swiper img {
+  width: 112px;
+  height: 112px;
+}
+
+/* Community */
+.comm-container {
+  max-width: 398px;
+  background: var(--brown-bg);
+  backdrop-filter: blur(1.80909px);
+  border-radius: 16px;
+  padding: 17.4879px 16px;
+  margin: 0 auto;
+}
+
+.comm-container .title {
+  margin: initial;
+  text-align: center;
+}
+
+.comm-context .social-links {
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.comm-context .social-icon {
+  font-size: 14px;
+  text-align: center;
+  color: var(--brown-bg);
+  background-color: var(--light);
+  padding: 5px;
+  height: inherit;
+  width: inherit;
+}
+
+/* Subscribe */
+
+#subscribe {
+  background: url("images/Desert.png") center center/cover no-repeat;
+  padding-top: 50px;
+  background-position-y: 100px;
+  padding-bottom: 20px;
+}
+
+#subscribe .card-title {
+  text-align: center;
+  margin: 15px auto 25px auto;
+}
+
+.sub-image {
+  width: 120px;
+  margin: 0 auto;
+  background-color: var(--brown-bg);
+  border-radius: 16px;
+}
+
+.sub-form {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  width: 230px;
+  height: 32.52px;
+  background: rgba(195, 112, 4, 0.5);
+  backdrop-filter: blur(3.09677px);
+  border-radius: 32.5161px;
+  color: var(--light);
+  padding: 0 20px;
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 12.3871px;
+}
+
+.sub-form::placeholder {
+  text-align: center;
+  color: var(--light);
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 12.3871px;
+}
+
+.sub-submit {
+  display: block;
+  width: 150px;
+  height: 32.52px;
+  background: var(--brown-bg);
+  border-radius: 32.5161px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  color: var(--light);
+  font-family: 'Titan One';
+font-weight: 400;
+font-size: 12.3871px;
+line-height: 15px;
+
+}
+
+
+/* Footer */
+footer {
+padding: 15px 0;
+color: white;
+background-color: var(--brown-bg);
+font-family: "Titan One";
+font-size: 16px;
+text-align: center;
+
+}
