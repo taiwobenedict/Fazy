@@ -19,6 +19,15 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+
+
+// Smooth scrolling
+$("nav a").on("click", function (e) {
+  e.preventDefault();
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top  -100}, 500);
+});
+
 let toggler = document.querySelector('.toggler');
 let navLinks = document.querySelector('.nav-links');
 let closeBtn = document.querySelector('.close')
