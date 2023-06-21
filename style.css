@@ -2,7 +2,7 @@
 
 /* Variable */
 :root {
-  --bg-color: linear-gradient(176.4deg, #F5C644 1.5%, #f5c644 122.41%);
+  --bg-color: linear-gradient(176.4deg, #f5c644 1.5%, #f5c644 122.41%);
   --brown-bg: #c37004;
   --light: #ffffff;
 }
@@ -16,11 +16,14 @@
   background: rgba(195, 112, 4, 0.32);
   backdrop-filter: blur(6px);
 }
-.image1 {display: block;}
+.image1, .chart-sm {
+  display: block;
+}
 
-  .image2 {
-    display: none;
-  }
+.image2, .chart-lg {
+  display: none;
+}
+
 
 
 .title {
@@ -202,6 +205,7 @@ a {
   position: relative;
   margin-bottom: 52px;
 }
+
 .about-image {
   width: 224px;
   margin: 0 auto;
@@ -512,29 +516,25 @@ a {
   cursor: pointer;
   border: none;
   color: var(--light);
-  font-family: 'Titan One';
-font-weight: 400;
-font-size: 12.3871px;
-line-height: 15px;
-
+  font-family: "Titan One";
+  font-weight: 400;
+  font-size: 12.3871px;
+  line-height: 15px;
 }
-
 
 /* Footer */
 footer {
-padding: 15px 0;
-color: white;
-background-color: var(--brown-bg);
-font-family: "Titan One";
-font-size: 16px;
-text-align: center;
-
+  padding: 15px 0;
+  color: white;
+  background-color: var(--brown-bg);
+  font-family: "Titan One";
+  font-size: 16px;
+  text-align: center;
 }
 
 .hidden-text {
   display: none;
 }
-
 
 @media (min-width: 786px) {
   .container {
@@ -546,6 +546,8 @@ text-align: center;
   }
   /* Feature */
   .feature-container {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -558,14 +560,17 @@ text-align: center;
   }
 
   /* About */
-  #about .container {
+
+  #about .about-container {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .about-image {
-    flex: 1;
+    flex: 2;
   }
 
   .about-content {
@@ -576,20 +581,20 @@ text-align: center;
   .about-image {
     max-width: 448px;
   }
+
   .about-title {
     text-align: left;
   }
 
   .about-text {
     max-width: 816px;
-    font-size: 19px;
     line-height: 24px;
   }
   .whitepaper {
     text-align: left;
   }
 
-  .whitepaper a  {
+  .whitepaper a {
     font-size: 25px;
     text-align: left;
     padding: 10px 20px;
@@ -610,13 +615,11 @@ text-align: center;
     padding-top: 16px;
     max-width: 800px;
     height: 184px;
-    
-    
   }
 
   .card-image-container {
     width: initial;
-    height:initial;
+    height: initial;
     flex: 1;
   }
 
@@ -658,8 +661,9 @@ text-align: center;
   }
 
   .token-context {
-    flex:2;
+    flex: 2;
     padding: 20px;
+    margin-left: 10px;
   }
 
   .token-footer div {
@@ -668,15 +672,62 @@ text-align: center;
     border-radius: 25px;
   }
 
-  .hidden-text{
+  .hidden-text {
     display: block;
     margin: 1rem 0px;
     margin-top: 2rem;
   }
-  .image1 {display: none;}
+  .image1 {
+    display: none;
+  }
 
   .image2 {
     display: block;
+    width: 320px;
+  }
+
+  /* Charts */
+  .chart-lg {
+    display: block;
+  }
+  .chart-sm {
+    display: none;
+  }
+
+  .chart-container {
+    margin: 4rem auto;
+  }
+
+  .chart-image {
+    width: 348px;
+    margin: 0 auto;
+    
+  }
+
+  .chart-content {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+  }
+
+  .chart-content p {
+    position: relative;
+    margin-left: 4rem;
+  }
+
+  .chart-content p::before {
+    content: '';
+    background-color: var(--brown-bg);
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -30;
+    border-radius: 5px;
+
   }
 
   /* Road map */
@@ -684,13 +735,13 @@ text-align: center;
   .phases {
     display: flex;
     max-width: 800px;
-    
   }
   .phase {
     border-top: solid 7px var(--brown-bg);
     border-left: none;
     padding-top: 40px;
     padding-left: 0;
+    padding-right: 30px;
   }
 
   .phase::before {
@@ -698,6 +749,71 @@ text-align: center;
   }
 
   .phase:last-child {
-  border-top-color: transparent;
-}
+    border-top-color: transparent;
+  }
+
+  /* community */
+  .comm-container {
+    max-width: 800px;
+  }
+
+  .comm-container .title {
+    margin: 2rem 0;
+  }
+
+  .swiper {
+    max-width: 800px;
+    height: 212px;
+  }
+
+  .swiper img {
+    width: 212px;
+    height: 212px;
+  }
+  /* subcribe */
+  #subscribe {
+    background-position-y: -200px;
+    margin-top: 50px;
+  }
+
+  .form-container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: start;
+  }
+
+  .form-container .card-title {
+    text-align: start !important;
+    font-size: 1.8rem;
+  }
+  
+  form {
+    margin-left: 30px;
+
+  }
+  .sub-image {
+    width: 248px;
+  }
+  .sub-form {
+    margin-left: 0;
+    height: 56px;
+    width: 400px;
+  }
+
+  .sub-form::placeholder {
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  form , .sub-form {
+    flex: 1;
+  }
+
+  .sub-submit {
+    font-size: 1.3rem;
+    margin-left: 0;
+    
+  }
+
 }
