@@ -569,7 +569,7 @@ text-align: center;
 
   .about-text {
     max-width: 816px;
-    font-size: 18px;
+    font-size: initial;
     line-height: 24px;
   }
   .whitepaper {
