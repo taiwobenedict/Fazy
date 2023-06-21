@@ -64,7 +64,7 @@ a {
 
 /* Hero section */
 #hero-section {
-  height: 100vh;
+  
   position: relative;
   background: url("images/BG.png") center center/cover no-repeat;
   background-position-y: top;
@@ -183,6 +183,7 @@ header {
   margin-left: 3rem;
 }
 
+
 /* cta */
 .cta-container {
   position: absolute;
@@ -203,14 +204,20 @@ header {
   font-family: "Titan One", cursive;
   color: var(--light);
   font-weight: 400;
-  font-size: 16.1px;
+  font-size: 0.9rem;
   line-height: 11px;
   margin: 0 1rem;
   background-color: var(--brown-bg);
-  padding: 10px 28.2353px;
-
+  padding: 12px 28.2353px;
+  text-align: center;
   border-radius: 22.2353px;
   box-shadow: 0px 4px 5px rgba(205, 205, 205, 0.7);
+  transition: 0.4s;
+}
+
+.cta-btn:hover {
+  
+  transform: scale(1.1);
 }
 
 .cactus-sm {
@@ -898,5 +905,10 @@ footer {
   .nav-links a:hover {
     color: var(--light);
     transform: scale(1.1);
+  }
+
+  .cta-btn {
+  font-size: 24.1px;
+  width: 150px;
   }
 }
