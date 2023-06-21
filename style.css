@@ -16,15 +16,15 @@
   background: rgba(195, 112, 4, 0.32);
   backdrop-filter: blur(6px);
 }
-.image1, .chart-sm {
+.image1,
+.chart-sm {
   display: block;
 }
 
-.image2, .chart-lg {
+.image2,
+.chart-lg {
   display: none;
 }
-
-
 
 .title {
   font-family: "Titan One";
@@ -78,12 +78,28 @@ a {
   left: 0;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  transition: 0.4s;
+  padding: 10px 0;
+}
+
+.header-bg {
+  background-color: rgba(195, 112, 4, 0.52);
+  backdrop-filter: blur(6px);
+}
+
 .main-nav {
   margin-top: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .link-style {
@@ -117,19 +133,50 @@ a {
 }
 
 .nav-links {
-  display: none;
   position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
-  top: 0;
-  left: 0;
   background-color: rgba(195, 112, 4, 0.52);
+  padding-left: 1rem;
+  padding-top: 1rem;
   backdrop-filter: blur(5px);
+  z-index: 100;
+  transition: 0.4s;
+}
+.active {
+  transform: translateX(100%);
 }
 
 .nav-links a {
   display: block;
+  color: var(--light);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Titan One", cursive;
+  transition: 0.4s;
+}
+
+.nav-links a:hover {
+  color: var(--brown-bg);
+  transform: scale(1.1);
+}
+
+.close {
+  font-size: 2rem;
+  margin-left: right;
+  padding-right: 1rem;
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: 0.4s;
+  transform-origin: right;
+}
+
+.close:hover {
+  color: var(--brown-bg);
+  transform: scale(1.1);
 }
 
 .toggler {
@@ -536,7 +583,7 @@ footer {
   display: none;
 }
 
-@media (min-width: 786px) {
+@media (min-width: 915px) {
   .container {
     max-width: 1200px;
   }
@@ -701,7 +748,6 @@ footer {
   .chart-image {
     width: 348px;
     margin: 0 auto;
-    
   }
 
   .chart-content {
@@ -710,7 +756,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-
   }
 
   .chart-content p {
@@ -719,7 +764,7 @@ footer {
   }
 
   .chart-content p::before {
-    content: '';
+    content: "";
     background-color: var(--brown-bg);
     margin-right: 20px;
     width: 20px;
@@ -727,7 +772,6 @@ footer {
     position: absolute;
     left: -30;
     border-radius: 5px;
-
   }
 
   /* Road map */
@@ -787,10 +831,9 @@ footer {
     text-align: start !important;
     font-size: 1.8rem;
   }
-  
+
   form {
     margin-left: 30px;
-
   }
   .sub-image {
     width: 248px;
@@ -806,14 +849,54 @@ footer {
     text-align: start;
   }
 
-  form , .sub-form {
+  form,
+  .sub-form {
     flex: 1;
   }
 
   .sub-submit {
     font-size: 1.3rem;
     margin-left: 0;
-    
   }
 
+  /* reset */
+  .active {
+    transform: translateX(0%);
+  }
+
+  .toggler,
+  .close {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brown-bg);
+    padding: 0px 5px;
+    backdrop-filter: blur(0px);
+    transition: 0.4s;
+    margin: 0 10px;
+    border-radius: 88px;
+    width: 620px;
+    height: 50px;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    color: var(--light);
+    font-size: initial;
+    transition: 0.4s;
+    margin: 0px 10px;
+  }
+  .main-nav {
+    align-items: center;
+  }
+
+  .nav-links a:hover {
+    color: var(--light);
+    transform: scale(1.1);
+  }
 }

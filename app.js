@@ -19,19 +19,31 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+let toggler = document.querySelector('.toggler');
+let navLinks = document.querySelector('.nav-links');
+let closeBtn = document.querySelector('.close')
+let allLinks = document.querySelectorAll('.link')
+let header = document.querySelector('header')
 
-// function myFunc(x) {
-//   if (x.matches) {
-//     let swiper = new Swiper(".mySwiper", {
-//       spaceBetween: 10,
-//       slidesPerView: 3,
-//       loop: true,
-//       autoplay: {
-//         delay: 2500,
-//         disableOnInteraction: false,
-//       },
-//     });
-//   }
-// }
 
-// var x = window.matchMedia("(min-width: 786)")
+function closeSideBar () {
+  navLinks.classList.toggle('active')
+  header.classList.remove('header-bg')
+
+}
+
+
+allLinks.forEach(link => link.onclick = () => closeSideBar())
+toggler.onclick = () => closeSideBar()
+closeBtn.onclick = () => closeSideBar()
+
+document.body.onscroll = () => {
+  navLinks.classList.add("active");
+  
+  if (document.body.scrollTop == 0) {
+    header.classList.remove('header-bg')
+  } else {
+    header.classList.add('header-bg')
+  }
+
+}
