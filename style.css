@@ -2,7 +2,7 @@
 
 /* Variable */
 :root {
-  --bg-color: linear-gradient(176.4deg, #f3d16d 1.5%, #f5c644 122.41%);
+  --bg-color: linear-gradient(176.4deg, #F5C644 1.5%, #f5c644 122.41%);
   --brown-bg: #c37004;
   --light: #ffffff;
 }
@@ -341,6 +341,14 @@ a {
   backdrop-filter: blur(6px);
 }
 
+.token-footer {
+  margin-top: 1rem;
+}
+
+.token-footer div {
+  margin: 0 2rem 0 1.5rem;
+}
+
 /* Charts */
 #charts {
   margin-bottom: 3rem;
@@ -513,4 +521,23 @@ font-family: "Titan One";
 font-size: 16px;
 text-align: center;
 
+}
+
+
+@media (min-width: 786px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .feature-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature {
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
 }
