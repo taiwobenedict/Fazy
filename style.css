@@ -447,16 +447,20 @@ header {
     position: absolute;
     left: -30;
     border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .chart-content.supply {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
   }
 
   .chart-content.supply p {
     margin-left: 3rem;
+    margin-top: 0;
   }
 
 /* Roadmap */
