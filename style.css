@@ -452,6 +452,11 @@ header {
   .chart-content.supply {
     margin: 0 auto;
     justify-content: center;
+    align-items: center;
+  }
+
+  .chart-content.supply p {
+    margin-left: 3rem;
   }
 
 /* Roadmap */
