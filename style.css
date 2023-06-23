@@ -292,6 +292,11 @@ header {
   background-color: var(--brown-bg);
   padding: 5px 20px;
   border-radius: 30.7279px;
+  transition: 0.4s;
+}
+
+.whitepaper a:hover{
+  transform: scale(1.1);
 }
 
 .rock {
