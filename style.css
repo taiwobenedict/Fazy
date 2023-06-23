@@ -426,6 +426,28 @@ header {
   margin-bottom: 1.8rem;
 }
 
+
+.chart-content p {
+    position: relative;
+    margin-left: 4rem;
+  }
+
+  .chart-content p::before {
+    content: "";
+    background-color: var(--brown-bg);
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -30;
+    border-radius: 5px;
+  }
+
+  .chart-content.supply {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
 /* Roadmap */
 #roadmap {
   position: relative;
@@ -765,21 +787,7 @@ footer {
     margin-top: 20px;
   }
 
-  .chart-content p {
-    position: relative;
-    margin-left: 4rem;
-  }
-
-  .chart-content p::before {
-    content: "";
-    background-color: var(--brown-bg);
-    margin-right: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: -30;
-    border-radius: 5px;
-  }
+  
 
   /* Road map */
 
