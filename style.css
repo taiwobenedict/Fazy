@@ -304,6 +304,7 @@ header {
   right: 0;
   bottom: 0;
   width: 244px;
+  z-index: -3;
 }
 
 /* How to buy  */
