@@ -462,14 +462,7 @@ header {
   }
   
   .box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .box-container:nth-child(2) {
-    margin: 0 20px;
+    margin-top: 10px;
   }
 
   .box-container p {
